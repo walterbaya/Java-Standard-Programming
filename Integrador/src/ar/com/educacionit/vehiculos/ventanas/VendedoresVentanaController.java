@@ -1,27 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ar.com.educacionit.vehiculos.ventanas;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Walter Ariel Baya
- */
+
 public class VendedoresVentanaController implements Initializable {
-
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private Button cerrar;
+    @FXML
+    private void cerrarVentana(){
+        Stage escenario = (Stage)cerrar.getScene().getWindow();
+        escenario.close();
+        Runner.cerrar();
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       
     }    
     
 }

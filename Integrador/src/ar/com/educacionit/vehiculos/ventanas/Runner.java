@@ -12,7 +12,7 @@ public class Runner extends Application {
 
     private Stage escenarioPrincipal;
     private AnchorPane ventanaMaestra;
-    private boolean abierta = false;
+    private static boolean abierta=false;
 
     @Override
     public void start(Stage escenarioPrincipal) throws IOException {
@@ -37,6 +37,7 @@ public class Runner extends Application {
     }
 
     public void abrirAutosVentana() throws IOException {
+        if(abierta==false){
         Stage escenario = new Stage();
         escenario.initOwner(escenarioPrincipal);
         escenario.setTitle("Inicio");
@@ -50,9 +51,11 @@ public class Runner extends Application {
         escenario.setScene(escena);
         escenario.show();
         abierta = true;
+        
     }
-
+    }
     public void abrirVentanaCompradores() throws IOException {
+        if(abierta==false){
         Stage escenario = new Stage();
         escenario.initOwner(escenarioPrincipal);
         escenario.setTitle("Comparadores");
@@ -65,10 +68,15 @@ public class Runner extends Application {
         Scene escena = new Scene(ventanaCargada);
         escenario.setScene(escena);
         escenario.show();
-
+        abierta=true;
+         if(!escenario.isShowing()){
+            abierta=false;
+        }
     }
-
+    }
     public void abrirVentanaVendedores() throws IOException {
+        if(abierta==false){
+            
         Stage escenario = new Stage();
         escenario.initOwner(escenarioPrincipal);
         escenario.setTitle("Vendedores");
@@ -81,9 +89,17 @@ public class Runner extends Application {
         Scene escena = new Scene(ventana);
         escenario.setScene(escena);
         escenario.show();
-
+        abierta=true;
+         if(!escenario.isShowing()){
+            abierta=false;
+        }
+        }
     }
-
+    
+    public static void cerrar(){
+       abierta=false; 
+    }
+    
     public static void main(String[] args) {
         launch(args);
     }
