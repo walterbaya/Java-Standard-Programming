@@ -14,7 +14,7 @@
               <MenuItem mnemonicParsing="false" onAction="#AbrirVentanaAutos" text="Autos" />
                   <MenuItem mnemonicParsing="false" onAction="#AbrirVentanaCompradores" text="Compradores" />
                   <MenuItem mnemonicParsing="false" onAction="#AbrirVentanaVendedores" text="Vendedores" />
-                  <MenuItem mnemonicParsing="false" text="Configuracion" />
+                  <MenuItem mnemonicParsing="false" onAction="#AbrirVentanaConfiguracion" text="Configuracion" />
                   <MenuItem mnemonicParsing="false" text="Salir" />
             </items>
           </Menu>

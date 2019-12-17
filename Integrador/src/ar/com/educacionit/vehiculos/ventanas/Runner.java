@@ -46,7 +46,7 @@ public class Runner extends Application {
         URL direccion = getClass().getResource("/ar/com/educacionit/vehiculos/ventanas/AutosVentana.fxml");
         cargador.setLocation(direccion);
         AnchorPane ventana = (AnchorPane) cargador.load();
-
+       
         Scene escena = new Scene(ventana);
         escenario.setScene(escena);
         escenario.show();
@@ -58,7 +58,7 @@ public class Runner extends Application {
         if(abierta==false){
         Stage escenario = new Stage();
         escenario.initOwner(escenarioPrincipal);
-        escenario.setTitle("Comparadores");
+        escenario.setTitle("Compradores");
 
         FXMLLoader cargador = new FXMLLoader();
         URL direccion = getClass().getResource("/ar/com/educacionit/vehiculos/ventanas/CompradoresVentana.fxml");
@@ -68,6 +68,7 @@ public class Runner extends Application {
         Scene escena = new Scene(ventanaCargada);
         escenario.setScene(escena);
         escenario.show();
+        
         abierta=true;
          if(!escenario.isShowing()){
             abierta=false;
@@ -93,6 +94,29 @@ public class Runner extends Application {
          if(!escenario.isShowing()){
             abierta=false;
         }
+        }
+    }
+    
+    public void abrirVentanaConfiguracion() throws IOException{
+        if(abierta==false){
+            
+            Stage escenario = new Stage();
+            escenario.initOwner(escenarioPrincipal);
+            escenario.setTitle("Configuracion");
+            
+            FXMLLoader cargador = new FXMLLoader();
+            URL direccion = getClass().getResource("/ar/com/educacionit/vehiculos/ventanas/ConfiguracionVentana.fxml");
+            cargador.setLocation(direccion);
+            AnchorPane ventana = (AnchorPane) cargador.load();
+            
+            Scene escena = new Scene(ventana);
+            escenario.setScene(escena);
+            escenario.show();
+            abierta=true;
+            if(!escenario.isShowing()){
+                abierta=false;
+            }
+            
         }
     }
     

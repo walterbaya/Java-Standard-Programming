@@ -21,6 +21,9 @@ public class VentanaMaestraController implements Initializable {
     public void AbrirVentanaCompradores() throws IOException{
         this.runner.abrirVentanaCompradores();
     }
+    public void AbrirVentanaConfiguracion() throws IOException{
+        this.runner.abrirVentanaConfiguracion();
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
