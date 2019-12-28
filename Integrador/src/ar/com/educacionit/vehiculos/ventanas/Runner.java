@@ -10,9 +10,27 @@ import javafx.stage.Stage;
 
 public class Runner extends Application {
 
-    private Stage escenarioPrincipal;
+    private static Stage escenarioPrincipal;
     private AnchorPane ventanaMaestra;
-    private static boolean abierta=false;
+    private static boolean abierta = false;
+    private static boolean abiertaCompradores=false;
+    
+    public static boolean estado() {
+        return abierta;
+    }
+
+    public static void setEstado(boolean estado) {
+        abierta = estado;
+    }
+
+    public static Stage escenarioPrincipal() {
+        return escenarioPrincipal;
+    }
+    
+    public static boolean estadoCompradores(){
+        return abiertaCompradores;
+    }
+    
 
     @Override
     public void start(Stage escenarioPrincipal) throws IOException {
@@ -29,7 +47,7 @@ public class Runner extends Application {
 
         VentanaMaestraController controlador = cargador.getController();
         controlador.setRunner(this);
-        
+
         Scene escena = new Scene(ventanaPrincipal);
         escenarioPrincipal.setScene(escena);
         escenarioPrincipal.show();
@@ -37,93 +55,96 @@ public class Runner extends Application {
     }
 
     public void abrirAutosVentana() throws IOException {
-        if(abierta==false){
-        Stage escenario = new Stage();
-        escenario.initOwner(escenarioPrincipal);
-        escenario.setTitle("Inicio");
+        if (abierta == false) {
+            Stage escenario = new Stage();
+            escenario.initOwner(escenarioPrincipal);
+            escenario.setTitle("Inicio");
 
-        FXMLLoader cargador = new FXMLLoader();
-        URL direccion = getClass().getResource("/ar/com/educacionit/vehiculos/ventanas/AutosVentana.fxml");
-        cargador.setLocation(direccion);
-        AnchorPane ventana = (AnchorPane) cargador.load();
-       
-        Scene escena = new Scene(ventana);
-        escenario.setScene(escena);
-        escenario.show();
-        abierta = true;
-        
+            FXMLLoader cargador = new FXMLLoader();
+            URL direccion = getClass().getResource("/ar/com/educacionit/vehiculos/ventanas/AutosVentana.fxml");
+            cargador.setLocation(direccion);
+            AnchorPane ventana = (AnchorPane) cargador.load();
+
+            Scene escena = new Scene(ventana);
+            escenario.setScene(escena);
+            escenario.show();
+            abierta = true;
+
+        }
     }
-    }
+
     public void abrirVentanaCompradores() throws IOException {
-        if(abierta==false){
-        Stage escenario = new Stage();
-        escenario.initOwner(escenarioPrincipal);
-        escenario.setTitle("Compradores");
+        if (abierta == false) {
+            Stage escenario = new Stage();
+            escenario.initOwner(escenarioPrincipal);
+            escenario.setTitle("Compradores");
 
-        FXMLLoader cargador = new FXMLLoader();
-        URL direccion = getClass().getResource("/ar/com/educacionit/vehiculos/ventanas/CompradoresVentana.fxml");
-        cargador.setLocation(direccion);
-        AnchorPane ventanaCargada = (AnchorPane) cargador.load();
+            FXMLLoader cargador = new FXMLLoader();
+            URL direccion = getClass().getResource("/ar/com/educacionit/vehiculos/ventanas/CompradoresVentana.fxml");
+            cargador.setLocation(direccion);
+            AnchorPane ventanaCargada = (AnchorPane) cargador.load();
 
-        Scene escena = new Scene(ventanaCargada);
-        escenario.setScene(escena);
-        escenario.show();
-        
-        abierta=true;
-         if(!escenario.isShowing()){
-            abierta=false;
+            Scene escena = new Scene(ventanaCargada);
+            escenario.setScene(escena);
+            escenario.show();
+
+            abierta = true;
+            abiertaCompradores=true;
+            if (!escenario.isShowing()) {
+                abierta = false;
+            }
         }
     }
-    }
+
     public void abrirVentanaVendedores() throws IOException {
-        if(abierta==false){
-            
-        Stage escenario = new Stage();
-        escenario.initOwner(escenarioPrincipal);
-        escenario.setTitle("Vendedores");
+        if (abierta == false) {
 
-        FXMLLoader cargador = new FXMLLoader();
-        URL direccion = getClass().getResource("/ar/com/educacionit/vehiculos/ventanas/VendedoresVentana.fxml");
-        cargador.setLocation(direccion);
-        AnchorPane ventana = (AnchorPane) cargador.load();
+            Stage escenario = new Stage();
+            escenario.initOwner(escenarioPrincipal);
+            escenario.setTitle("Vendedores");
 
-        Scene escena = new Scene(ventana);
-        escenario.setScene(escena);
-        escenario.show();
-        abierta=true;
-         if(!escenario.isShowing()){
-            abierta=false;
-        }
+            FXMLLoader cargador = new FXMLLoader();
+            URL direccion = getClass().getResource("/ar/com/educacionit/vehiculos/ventanas/VendedoresVentana.fxml");
+            cargador.setLocation(direccion);
+            AnchorPane ventana = (AnchorPane) cargador.load();
+
+            Scene escena = new Scene(ventana);
+            escenario.setScene(escena);
+            escenario.show();
+            abierta = true;
+            if (!escenario.isShowing()) {
+                abierta = false;
+            }
         }
     }
-    
-    public void abrirVentanaConfiguracion() throws IOException{
-        if(abierta==false){
-            
+
+    public void abrirVentanaConfiguracion() throws IOException {
+        if (abierta == false) {
+
             Stage escenario = new Stage();
             escenario.initOwner(escenarioPrincipal);
             escenario.setTitle("Configuracion");
-            
+
             FXMLLoader cargador = new FXMLLoader();
             URL direccion = getClass().getResource("/ar/com/educacionit/vehiculos/ventanas/ConfiguracionVentana.fxml");
             cargador.setLocation(direccion);
             AnchorPane ventana = (AnchorPane) cargador.load();
-            
+
             Scene escena = new Scene(ventana);
             escenario.setScene(escena);
             escenario.show();
-            abierta=true;
-            if(!escenario.isShowing()){
-                abierta=false;
+            abierta = true;
+            if (!escenario.isShowing()) {
+                abierta = false;
             }
-            
+
         }
     }
-    
-    public static void cerrar(){
-       abierta=false; 
+
+    public void cerrar() {
+        abierta = false;
     }
-    
+
     public static void main(String[] args) {
         launch(args);
     }

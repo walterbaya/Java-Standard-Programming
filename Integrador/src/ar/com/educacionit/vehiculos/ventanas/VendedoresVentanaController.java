@@ -20,7 +20,7 @@ public class VendedoresVentanaController implements Initializable {
     private void cerrarVentana() {
         Stage escenario = (Stage) cerrar.getScene().getWindow();
         escenario.close();
-        Runner.cerrar();
+        Runner.setEstado(false);
     }
 
     @Override

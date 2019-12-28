@@ -11,6 +11,9 @@ public class VentanaMaestraController implements Initializable {
     public void setRunner(Runner runner){
         this.runner=runner;
     }
+    public Runner getRunner(){
+        return runner;
+    }
     public void AbrirVentanaAutos() throws IOException{
         this.runner.abrirAutosVentana();
     }

@@ -37,8 +37,7 @@ public class ConfiguracionVentanaController implements Initializable {
     public void cerrarVentana() {
         Stage escenario = (Stage) cerrar.getScene().getWindow();
         escenario.close();
-        Runner.cerrar();
-
+        Runner.setEstado(false);
     }
 
 }
