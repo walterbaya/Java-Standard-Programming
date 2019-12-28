@@ -1,0 +1,58 @@
+public class Triangulo {
+
+    
+    public static void main(String[] args) {
+        for(int i=1;i<=10;i++)
+        {
+            if(i==1)//imprime el primer punto
+            { for(int j=1;j<=9;j++)
+                {
+                    System.out.print(" "); 
+                }
+                System.out.print(" *\n");
+            }
+            else
+            { //imprime los demas puntos hasta la anteultima
+            if(i<10)
+            {//imprime el lado izquierdo
+                for(int j=1;j<=(10-i);j++)
+                {
+                System.out.print(" "); 
+                }
+                
+            System.out.print("*");
+            for(int j=1;j<2*i;j++)
+                {
+                System.out.print(" "); 
+                }
+            System.out.print("*\n");    
+            }
+            else
+            {//imprime la base
+                for(int j=1;j<=2*(i-1);j++)
+                {System.out.print("*");}
+                
+            }
+        
+            }
+                
+                
+          
+            
+            
+            
+           
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
+    }
