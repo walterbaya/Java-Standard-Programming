@@ -10,16 +10,6 @@ import javafx.scene.control.TextField;
 
 public class VentanaComputacionController implements Initializable {
 
-    private enum MateriasCBC {
-        AnalisisMatematico, Algebra, ICSE, IPC, Quimica, Fisica
-    }
-
-    private enum MateriasGrado {
-        AnalisisII, AlgebraI, AlgoritmosI, AlgoritmosII, AlgoritmosIII,
-        OrganizacionI, OrganizacionII, MetodosNumericos, IngenieriaI, IngenieriaII, ProbabilidadYEstadistica,
-        SistemasOperativos, LogicaYComputabilidad, TeoriaComunicaciones, BaseDeDatos, TeoriaDeLenguajes, ParadigmasDeLenguajes
-    }
-
     //CheckBox de Cursadas
     @FXML
     CheckBox AnalisisIIC;
@@ -145,137 +135,169 @@ public class VentanaComputacionController implements Initializable {
     TextField PromedioConCBCF;
 
     //Promedio
-    double sumaCBC;
-    double suma;
-    double promedioCBC;
-    double promedio;
+    private double sumaCBC;
+    private double suma;
+    private double promedioCBC;
+    private double cantNotas;
 
-    public void setAnalisisIIN(TextField AnalisisIIN) {
+    @FXML
+    public void setAnalisisIIN() {
         AnalisisIIN.setDisable(true);
         String texto = AnalisisIIN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setAlgebraIN(TextField AlgebraIN) {
+    @FXML
+    public void setAlgebraIN() {
         AlgebraIN.setDisable(true);
         String texto = AlgebraIN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setAlgoritmosIN(TextField AlgoritmosIN) {
+    @FXML
+    public void setAlgoritmosIN() {
         AlgoritmosIN.setDisable(true);
         String texto = AlgoritmosIN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setAlgoritmosIIN(TextField AlgoritmosIIN) {
+    @FXML
+    public void setAlgoritmosIIN() {
         AlgoritmosIIN.setDisable(true);
         String texto = AlgoritmosIIN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setAlgoritmosIIIN(TextField AlgoritmosIIIN) {
+    @FXML
+    public void setAlgoritmosIIIN() {
         AlgoritmosIIIN.setDisable(true);
         String texto = AlgoritmosIIIN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setOrganizacionIN(TextField OrganizacionIN) {
+    @FXML
+    public void setOrganizacionIN() {
         OrganizacionIN.setDisable(true);
         String texto = OrganizacionIN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setOrganizacionIIN(TextField OrganizacionIIN) {
+    @FXML
+    public void setOrganizacionIIN() {
         OrganizacionIIN.setDisable(true);
         String texto = OrganizacionIIN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setMetodosNumericosN(TextField MetodosNumericosN) {
+    @FXML
+    public void setMetodosNumericosN() {
         MetodosNumericosN.setDisable(true);
         String texto = MetodosNumericosN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setIngenieriaIN(TextField IngenieriaIN) {
+    @FXML
+    public void setIngenieriaIN() {
         IngenieriaIN.setDisable(true);
         String texto = IngenieriaIN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setIngenieriaIIN(TextField IngenieriaIIN) {
+    @FXML
+    public void setIngenieriaIIN() {
         IngenieriaIIN.setDisable(true);
         String texto = IngenieriaIIN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setProbabilidadYEstadisticaN(TextField ProbabilidadYEstadisticaN) {
+    @FXML
+    public void setProbabilidadYEstadisticaN() {
         ProbabilidadYEstadisticaN.setDisable(true);
         String texto = ProbabilidadYEstadisticaN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setSistemasOperativosN(TextField SistemasOperativosN) {
+    @FXML
+    public void setSistemasOperativosN() {
         SistemasOperativosN.setDisable(true);
         String texto = SistemasOperativosN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setLogicaYComputabilidadN(TextField LogicaYComputabilidadN) {
+    @FXML
+    public void setLogicaYComputabilidadN() {
         LogicaYComputabilidadN.setDisable(true);
         String texto = LogicaYComputabilidadN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setTeoriaComunicacionesN(TextField TeoriaComunicacionesN) {
+    @FXML
+    public void setTeoriaComunicacionesN() {
         TeoriaComunicacionesN.setDisable(true);
         String texto = TeoriaComunicacionesN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
-
-    public void setBaseDeDatosN(TextField BaseDeDatosN) {
+    @FXML
+    public void setBaseDeDatosN() {
         BaseDeDatosN.setDisable(true);
         String texto = BaseDeDatosN.getText();
         Double nota = Double.valueOf(texto);
         suma = nota + suma;
         sumaCBC = nota + sumaCBC;
+        cantNotas++;
+    }
+    @FXML
+    public void setTeoriaDeLenguajesN() {
+        TeoriaDeLenguajesN.setDisable(true);
+        String texto = TeoriaDeLenguajesN.getText();
+        Double nota = Double.valueOf(texto);
+        suma = nota + suma;
+        sumaCBC = nota + sumaCBC;
+        cantNotas++;
+    }
+    @FXML
+    public void setParadigmaDeLenguajesN() {
+        ParadigmaDeLenguajesN.setDisable(true);
+        String texto = ParadigmaDeLenguajesN.getText();
+        Double nota = Double.valueOf(texto);
+        suma = nota + suma;
+        sumaCBC = nota + sumaCBC;
+        cantNotas++;
     }
 
-    public void setTeoriaDeLenguajesN(TextField TeoriaDeLenguajesN) {
-        this.TeoriaDeLenguajesN = TeoriaDeLenguajesN;
-    }
-
-    public void setParadigmaDeLenguajesN(TextField ParadigmaDeLenguajesN) {
-        this.ParadigmaDeLenguajesN = ParadigmaDeLenguajesN;
+    @FXML
+    public void setPromedioSinCbc() {
+        double promedio = suma / cantNotas;
+        PromedioSinCBCF.setText(String.valueOf(promedio));
     }
 
     @Override

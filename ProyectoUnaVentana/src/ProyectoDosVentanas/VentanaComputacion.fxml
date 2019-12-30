@@ -97,86 +97,86 @@
             <TextField fx:id="IngenieriaIIN" GridPane.columnIndex="1" GridPane.rowIndex="26" />
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="11">
                <center>
-                  <CheckBox fx:id="AlgebraIF" mnemonicParsing="false" BorderPane.alignment="CENTER" />
+                  <CheckBox fx:id="AlgebraIF" mnemonicParsing="false" onAction="#setAlgebraIN" BorderPane.alignment="CENTER" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="12">
                <center>
-                  <CheckBox fx:id="AlgoritmosIF" mnemonicParsing="false" />
+                  <CheckBox fx:id="AlgoritmosIF" mnemonicParsing="false" onAction="#setAlgoritmosIN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="13">
                <center>
-                  <CheckBox fx:id="ProbabilidadYEstadisticaF" mnemonicParsing="false" />
+                  <CheckBox fx:id="ProbabilidadYEstadisticaF" mnemonicParsing="false" onAction="#setProbabilidadYEstadisticaN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="14">
                <center>
-                  <CheckBox fx:id="AlgoritmosIIF" mnemonicParsing="false" />
+                  <CheckBox fx:id="AlgoritmosIIF" mnemonicParsing="false" onAction="#setAlgoritmosIIN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="15">
                <center>
                   <BorderPane>
                      <center>
-                        <CheckBox fx:id="AlgoritmosIIIF" mnemonicParsing="false" />
+                        <CheckBox fx:id="AlgoritmosIIIF" mnemonicParsing="false" onAction="#setAlgoritmosIIIN" />
                      </center>
                   </BorderPane>
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="16">
                <center>
-                  <CheckBox fx:id="MetodosNumericosF" mnemonicParsing="false" />
+                  <CheckBox fx:id="MetodosNumericosF" mnemonicParsing="false" onAction="#setMetodosNumericosN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="17">
                <center>
-                  <CheckBox fx:id="OrganizacionIF" mnemonicParsing="false" />
+                  <CheckBox fx:id="OrganizacionIF" mnemonicParsing="false" onAction="#setOrganizacionIN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="18">
                <center>
-                  <CheckBox fx:id="OrganizacionIIF" mnemonicParsing="false" />
+                  <CheckBox fx:id="OrganizacionIIF" mnemonicParsing="false" onAction="#setOrganizacionIIN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="19">
                <center>
-                  <CheckBox fx:id="SistemasOperativosF" mnemonicParsing="false" />
+                  <CheckBox fx:id="SistemasOperativosF" mnemonicParsing="false" onAction="#setSistemasOperativosN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="20">
                <center>
-                  <CheckBox fx:id="LogicaYComputabilidadF" mnemonicParsing="false" />
+                  <CheckBox fx:id="LogicaYComputabilidadF" mnemonicParsing="false" onAction="#setLogicaYComputabilidadN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="21">
                <center>
-                  <CheckBox fx:id="TeoriaComunicacionesF" mnemonicParsing="false" />
+                  <CheckBox fx:id="TeoriaComunicacionesF" mnemonicParsing="false" onAction="#setTeoriaComunicacionesN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="22">
                <center>
-                  <CheckBox fx:id="IngenieriaIF" mnemonicParsing="false" />
+                  <CheckBox fx:id="IngenieriaIF" mnemonicParsing="false" onAction="#setIngenieriaIN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="23">
                <center>
-                  <CheckBox fx:id="BaseDeDatosF" mnemonicParsing="false" />
+                  <CheckBox fx:id="BaseDeDatosF" mnemonicParsing="false" onAction="#setBaseDeDatosN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="24">
                <center>
-                  <CheckBox fx:id="TeoriaDeLenguajesF" mnemonicParsing="false" />
+                  <CheckBox fx:id="TeoriaDeLenguajesF" mnemonicParsing="false" onAction="#setTeoriaDeLenguajesN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="25">
                <center>
-                  <CheckBox fx:id="ParadigmaDeLenguajesF" mnemonicParsing="false" />
+                  <CheckBox fx:id="ParadigmaDeLenguajesF" mnemonicParsing="false" onAction="#setParadigmaDeLenguajesN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="26">
                <center>
-                  <CheckBox fx:id="IngenieriaIIF" mnemonicParsing="false" />
+                  <CheckBox fx:id="IngenieriaIIF" mnemonicParsing="false" onAction="#setIngenieriaIIN" />
                </center>
             </BorderPane>
             <BorderPane GridPane.rowIndex="5">
@@ -262,14 +262,14 @@
             </AnchorPane>
             <AnchorPane GridPane.columnIndex="2" GridPane.rowIndex="10">
                <children>
-                  <CheckBox fx:id="AnalisisIIF" layoutX="19.0" layoutY="2.0" mnemonicParsing="false" />
+                  <CheckBox fx:id="AnalisisIIF" layoutX="19.0" layoutY="2.0" mnemonicParsing="false" onAction="#setAnalisisIIN" />
                </children>
             </AnchorPane>
             <TextField fx:id="AnalisisIIN" GridPane.columnIndex="1" GridPane.rowIndex="10" />
          </children>
       </GridPane>
       <TextField fx:id="PromedioSinCBCF" layoutX="184.0" layoutY="598.0" prefHeight="25.0" prefWidth="123.0" />
-      <Button fx:id="PromedioSinCBC" layoutX="24.0" layoutY="598.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Promedio" />
+      <Button fx:id="PromedioSinCBC" layoutX="24.0" layoutY="598.0" mnemonicParsing="false" onAction="#setPromedioSinCbc" prefHeight="25.0" prefWidth="146.0" text="Promedio" />
       <Button fx:id="PromedioConCBC" layoutX="324.0" layoutY="598.0" mnemonicParsing="false" text="Promedio con CBC" />
       <TextField fx:id="PromedioConCBCF" layoutX="453.0" layoutY="598.0" prefHeight="25.0" prefWidth="116.0" />
       <Button fx:id="cargarOptativas" layoutX="24.0" layoutY="561.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Cargar Optativas" />
