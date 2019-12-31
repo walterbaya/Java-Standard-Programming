@@ -1,5 +1,6 @@
 package ProyectoDosVentanas;
 
+import ProyectoDosVentanas.Controladores.VentanaPrincipalController;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -11,11 +12,11 @@ import javafx.stage.Stage;
 
 public class ProyectoUnaVentana extends Application {
 
-    static Stage escenarioPrincipal;
+    public static Stage escenarioPrincipal;
 
     @Override
     public void start(Stage escenario) throws Exception {
-        this.escenarioPrincipal = escenario;
+        ProyectoUnaVentana.escenarioPrincipal = escenario;
         abrirPrincipal();
 
     }
@@ -23,7 +24,7 @@ public class ProyectoUnaVentana extends Application {
     public void abrirPrincipal() throws IOException {
         //hay que cargar
         FXMLLoader cargador = new FXMLLoader();
-        URL direccion = getClass().getResource("VentanaPrincipal.fxml");
+        URL direccion = getClass().getResource("/ProyectoDosVentanas/Ventanas/VentanaPrincipal.fxml");
         cargador.setLocation(direccion);
         AnchorPane ventanaPrincipal = (AnchorPane) cargador.load();
 
@@ -53,7 +54,7 @@ public class ProyectoUnaVentana extends Application {
 
             //dar la ubicacion del fxml para que el cargador pueda encontrarlo
         //el getClass().getResource() me devuelve la url de mi archivo fxml
-        URL direccion = getClass().getResource("/ProyectoDosVentanas/VentanaMatematica.fxml");
+        URL direccion = getClass().getResource("/ProyectoDosVentanas/Ventanas/VentanaMatematica.fxml");
         cargador.setLocation(direccion);
 
         //creas el objeto AnchorPane que sera la base de la ventana a partir del cargador
@@ -77,7 +78,7 @@ public class ProyectoUnaVentana extends Application {
         escenario.setTitle("Ciencias de la computacion");
 
         FXMLLoader cargador = new FXMLLoader();
-        URL direccion = getClass().getResource("/ProyectoDosVentanas/VentanaComputacion.fxml");
+        URL direccion = getClass().getResource("/ProyectoDosVentanas/Ventanas/VentanaComputacion.fxml");
         cargador.setLocation(direccion);
         AnchorPane ventanaComputacion = (AnchorPane) cargador.load();
 

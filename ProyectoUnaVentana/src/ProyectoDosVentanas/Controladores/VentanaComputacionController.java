@@ -1,4 +1,4 @@
-package ProyectoDosVentanas;
+package ProyectoDosVentanas.Controladores;
 
 import static ProyectoDosVentanas.ProyectoUnaVentana.escenarioPrincipal;
 import java.io.IOException;
@@ -16,6 +16,12 @@ import javafx.stage.Stage;
 
 public class VentanaComputacionController implements Initializable {
 
+    
+    
+    
+    
+    boolean[] materiasCursadas = new boolean[23];
+    boolean[] materiasFinales = new boolean[23];
     //CheckBox de Cursadas
     @FXML
     CheckBox AnalisisIIC;
@@ -168,6 +174,8 @@ public class VentanaComputacionController implements Initializable {
         setSuma(nota);
         setSumaCBC(nota);
         cantNotas++;
+        materiasFinales[7] = true;
+        //escribir en la posicion 7 del vector un true en el archivo txt
     }
 
     @FXML
@@ -329,14 +337,16 @@ public class VentanaComputacionController implements Initializable {
         setSumaCBC(nota);
         cantNotas++;
     }
-    public void setPromedio(){
-        double promedio = sumaCBC/cantNotas;
+
+    public void setPromedio() {
+        double promedio = sumaCBC / cantNotas;
         System.out.println(sumaCBC + " " + cantNotas);
         PromedioConCBC.setText(String.valueOf(promedio));
     }
+
     @FXML
     public void setPromedioSinCbc() {
-        double promedio = suma/cantNotas;
+        double promedio = suma / cantNotas;
         System.out.println(suma + " " + cantNotas);
         PromedioSinCBCF.setText(String.valueOf(promedio));
     }
@@ -348,7 +358,7 @@ public class VentanaComputacionController implements Initializable {
         escenario.setTitle("Optativas");
 
         FXMLLoader cargador = new FXMLLoader();
-        URL direccion = getClass().getResource("/ProyectoDosVentanas/VentanaOptativas.fxml");
+        URL direccion = getClass().getResource("/ProyectoDosVentanas/Ventanas/VentanaOptativas.fxml");
         cargador.setLocation(direccion);
         AnchorPane ventanaOptativas = (AnchorPane) cargador.load();
 
@@ -364,7 +374,7 @@ public class VentanaComputacionController implements Initializable {
         escenario.setTitle("Aplazos");
 
         FXMLLoader cargador = new FXMLLoader();
-        URL direccion = getClass().getResource("/ProyectoDosVentanas/VentanaAplazos.fxml");
+        URL direccion = getClass().getResource("/ProyectoDosVentanas/Ventanas/VentanaAplazos.fxml");
         cargador.setLocation(direccion);
         AnchorPane ventanaAplazos = (AnchorPane) cargador.load();
 

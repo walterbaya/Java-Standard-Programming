@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="243.0" prefWidth="409.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProyectoDosVentanas.VentanaOptativasController">
+<AnchorPane id="AnchorPane" prefHeight="243.0" prefWidth="409.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProyectoDosVentanas.Controladores.VentanaOptativasController">
    <children>
       <Button layoutX="34.0" layoutY="186.0" mnemonicParsing="false" onAction="#ingresarMateriaOptativa" prefHeight="25.0" prefWidth="126.0" text="Ingresar Optativa" />
       <Button layoutX="216.0" layoutY="186.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Terminar" />

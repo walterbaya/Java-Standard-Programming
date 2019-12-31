@@ -1,4 +1,4 @@
-package ProyectoDosVentanas;
+package ProyectoDosVentanas.Controladores;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,6 +20,8 @@ public class VentanaOptativasController extends VentanaComputacionController imp
     @FXML
     TextField puntosRestantes;
 
+    
+    
     @FXML
     public void ingresarMateriaOptativa() {
         nombreMateriaS = nombreMateriaS + nombreMateria.getText() + " ";

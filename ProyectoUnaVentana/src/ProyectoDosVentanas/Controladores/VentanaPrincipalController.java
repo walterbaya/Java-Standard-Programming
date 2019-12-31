@@ -1,11 +1,11 @@
 
-package ProyectoDosVentanas;
+package ProyectoDosVentanas.Controladores;
 
+import ProyectoDosVentanas.ProyectoUnaVentana;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 
 
 public class VentanaPrincipalController implements Initializable {
