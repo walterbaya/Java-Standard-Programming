@@ -1,7 +1,6 @@
 package primes;
 
 import java.util.Scanner;
-//la complejidad de este algoritmo es complejidad O(n)
 //el algoritmo causa un stackOverflow al tener n = 100000 o mas
 //la idea del algoritmos es de tipo recursivo como se usaria en C++ o quizas mucho mas 
 //conveniente en Haskell

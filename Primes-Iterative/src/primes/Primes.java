@@ -1,7 +1,6 @@
 package primes;
 
 import java.util.Scanner;
-//la complejidad de este algoritmo es complejidad O(n)
 //este algoritmo es iterativo y mucho mas eficiente en terminos de memoria
 class Primes {
 
