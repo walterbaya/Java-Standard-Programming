@@ -1,11 +1,6 @@
 import java.util.ArrayList;
 
 public class Enterprise {
-	/**
-	 * g. para realizar el punto e. armar un método con la siguiente firma: public
-	 * static ArrayList obtenerDatosDeEmpleadosMenosDe30(ArrayList losEmpleados) De
-	 * ser posible reutilizar el método informarDatosDeEmpleados()
-	 */
 	public static void showEmployeesData(ArrayList<Employee> a) {
 		for (int i = 0; i < a.size(); i++) {
 			a.get(i).showEmployeeData();
